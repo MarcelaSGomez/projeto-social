@@ -8,7 +8,7 @@
 
 html, body {
     height: 100vh;
-    width: 100vh;
+    width:100vh;
     background-color: black; 
     background: url(../imagens/fundo-madeira.jpg) no-repeat top center;
     background-size: cover;
@@ -18,7 +18,7 @@ html, body {
 main {
     position: relative;
     height: 100vh;
-    width: 100vw;
+    width: 95vw; /*Não coloquei 100vw porque os ícones da lateral estavam saindo da tela.*/
 }
 
 section#telefone {
@@ -39,4 +39,23 @@ iframe#tela {
     left: 17px;
     height: 379px;
     width: 215px;
+}
+
+section#redes-sociais {
+    text-align: right;
+}
+
+section#redes-sociais img {
+    width: 50px;
+    margin: 5px;
+    border-radius: 50%; /*Assim o quadrado vira um círculo, pois as bordas foram cortadas até o centro da imagem.*/
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.600);
+    box-sizing: border-box; /*Assim a borda branca aparece ao passar o mouse em cima, mas não desloca os outros botões.*/
+}
+
+section#redes-sociais img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.653);
+    transform: translate(-3px, -3px); /*O botão desloca para cima e para a esquerda.*/
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.600); /*A sombra expande, dando a sensação de que o botão moveu de verdade.*/
+    transition: transform .3s, border 1s; /*O botão leva .3s para deslocar. No border, a borda branca vai levar 1s para aparecer depois que o mouse passar.*/
 }
